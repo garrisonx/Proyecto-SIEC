@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 01, 2010 at 09:26 PM
+-- Generation Time: Nov 02, 2010 at 02:43 AM
 -- Server version: 5.1.49
 -- PHP Version: 5.3.3-1ubuntu9.1
 
@@ -529,9 +529,9 @@ CREATE TABLE IF NOT EXISTS `tr_presesion` (
 
 INSERT INTO `tr_presesion` (`SESION_ID`, `MENSAJE`, `ESTADO`, `CRITERIO_COMPETENCIA_CRITERIO_COMPETENCIA_ID`, `PONDERACION`) VALUES
 (1, 'tiene nuevo mensaje', 0, 2, 'total'),
-(2, 'no ha recibido evaluacion', 0, 1, 'total'),
-(3, 'ha ocurrido error', 0, 3, 'total'),
-(4, 'registrese aqui', 0, 2, 'nula');
+(2, 'no ha recibido evaluacion', 0, 3, 'total'),
+(3, 'ha ocurrido error', 0, 4, 'total'),
+(4, 'registrese aqui', 0, 5, 'nula');
 
 -- --------------------------------------------------------
 
@@ -677,6 +677,12 @@ ALTER TABLE `tr_maestro_materia_grupo`
   ADD CONSTRAINT `fk_TR_MAESTRO_MATERIA_GRUPO_TC_GRUPO1` FOREIGN KEY (`GRUPO_GRUPO_ID`) REFERENCES `tc_grupo` (`GRUPO_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `tr_maestro_materia_grupo_ibfk_1` FOREIGN KEY (`Maestro_ID`) REFERENCES `tr_maestros` (`MAESTRO_ID`),
   ADD CONSTRAINT `tr_maestro_materia_grupo_ibfk_2` FOREIGN KEY (`Materia_ID`) REFERENCES `tc_materias` (`MATERIAS_ID`);
+
+--
+-- Constraints for table `tr_presesion`
+--
+ALTER TABLE `tr_presesion`
+  ADD CONSTRAINT `tr_presesion_ibfk_1` FOREIGN KEY (`CRITERIO_COMPETENCIA_CRITERIO_COMPETENCIA_ID`) REFERENCES `tr_criterio_competencia` (`CRITERIO_COMPETENCIA_ID`);
 
 --
 -- Constraints for table `tr_presesion_rechazada`
