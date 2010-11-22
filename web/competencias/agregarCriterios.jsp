@@ -35,7 +35,7 @@
                 <td>${Criterios.nombre}</td>
                 <td>${Criterios.descripcion}</td>
                 <td>${Criterios.ponderacion}</td>
-                <td><a href="competencias/crearCriterioCompetencia?idCriterio=${Criterios.id}&idCompetencia=${idCompetencia}&nombre=${nombre}" class="itemLink"><img src="images/add.png" alt="Agregar Criterio"/></a></td>
+                <td><a href="competencias/crearCriterioCompetencia?idCriterio=${Criterios.id}&idCompetencia=${idCompetencia}&nombre=${nombre}" class="linkItem"><img src="images/add.png" alt="Agregar Criterio"/></a></td>
 
             </tr>
         </c:forEach>
@@ -54,7 +54,7 @@
         <ul>
             <c:forEach items="${CriterioCompetencia}" var="CriterioCompetencia">
                 <li>${CriterioCompetencia.idCriterio}&nbsp;
-                    <a href="competencias/eliminarCriterioCompetencia?idCriterio=${CriterioCompetencia.idCriterio}&idCompetencia=${idCompetencia}&nombre=${nombre}" class="itemLink"><img src="images/delete.png"/></a>
+                    <a href="competencias/eliminarCriterioCompetencia?idCriterio=${CriterioCompetencia.idCriterio}&idCompetencia=${idCompetencia}&nombre=${nombre}" class="linkItem"><img src="images/delete.png"/></a>
                     </c:forEach>
         </ul>
     </div>
