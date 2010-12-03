@@ -35,7 +35,6 @@
                                              out.print("<td><a href='competencias/criterios/eliminarCriterio?id="+i.getId()+"' class='linkItem'><img src='images/delete.png'/></a></td>");
                                              out.print("<td><a href='competencias/criterios/modificarCriterio?id="+i.getId()+"' class='linkItem'><img src='images/page_edit.png'/></a></td>");
                                         }
-
                                         %>
                                        </tr>
                                     </tbody>

@@ -11,7 +11,7 @@ import java.sql.*;
  * @author Sandsower
  */
 public class ConexionBD {
-
+    //cambiar contrasena
     public ConexionBD(){
         this.conectarBD("root", "root");
     }
@@ -20,6 +20,7 @@ public class ConexionBD {
 
     public final void conectarBD(String username, String password){
         try{
+            //quitar puerto
             Class.forName("com.mysql.jdbc.Driver");
             String connectionUrl = "jdbc:mysql://localhost:8889/siec?user="+username+"&password="+password;
             Connection con = DriverManager.getConnection(connectionUrl);
