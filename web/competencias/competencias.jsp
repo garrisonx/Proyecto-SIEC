@@ -10,7 +10,7 @@
 <div id="mitte"><!-- Contenido -->
 
     <h1>Lista de Competencias</h1>
-    <a href="reportes/impresion.jsp?idCompetencia=0" class="linkItem">Imprimir Todos</a>
+    <a href="reportes/impresion.jsp?idCompetencia=0">Imprimir Todos</a>
     <center><a href="competencias/crearCompetencia" class="linkItem"><img src="images/add.png"/>Crear Competencia</a></center>
     <table>
         <thead>
@@ -22,6 +22,7 @@
                 <th width="100" alt="Eliminar">Eliminar</th>
                 <th width="100" alt="modificar">Modificar</th>
                 <th width="100" alt="Criterios">Criterios</th>
+                <th>Imprimir</th>
             </tr>
         </thead>
         <tbody align="center">
@@ -35,6 +36,7 @@
                     <td><a href="competencias/eliminarCompetencia?id=${Competencias.idCompetencia}" class="linkItem"><img src="images/delete.png" alt="Borrar competencia"/></td>
                     <td><a href="competencias/modificarCompetencia?idCompetencia=${Competencias.idCompetencia}" class="linkItem"><img src="images/page_edit.png" alt="Modificar Competencia"/></td>
                     <td><a href="competencias/agregarCriterios?idCompetencia=${Competencias.idCompetencia}&nombre=${Competencias.nombre}" class="linkItem"><img src="images/add.png" alt="Agregar Criterios"/></td>
+                    <td><a href="reportes/impresion.jsp?idCompetencia=${Competencias.idCompetencia}">Imprimir</a></td>
                 </tr>
             </c:forEach>
             </tr>
