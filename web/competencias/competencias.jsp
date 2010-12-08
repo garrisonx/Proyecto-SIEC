@@ -10,6 +10,7 @@
 <div id="mitte"><!-- Contenido -->
 
     <h1>Lista de Competencias</h1>
+    <a href="reportes/impresion.jsp?idCompetencia=0" class="linkItem">Imprimir Todos</a>
     <center><a href="competencias/crearCompetencia" class="linkItem"><img src="images/add.png"/>Crear Competencia</a></center>
     <table>
         <thead>
